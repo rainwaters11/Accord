@@ -1,6 +1,23 @@
+# Node.js
+node_modules/
+dist/
+.next/
+out/
+
+# Logs
+*.log
+
+# Environment variables
+.env*
+!.env.example
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
 
 # Playwright
-node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
