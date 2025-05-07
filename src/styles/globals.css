@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  /* Common button styles */
+  .btn {
+    @apply px-4 py-2 rounded-md transition-all duration-200 font-medium text-center;
+  }
+  
+  .btn-primary {
+    @apply btn bg-neon-blue text-white hover:bg-blue-600 hover:shadow-neon;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-neon-pink text-white hover:bg-pink-600 hover:shadow-neon-pink;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white;
+  }
+
+  /* Option button styles */
+  .option-btn {
+    @apply w-full text-left p-3 rounded-md transition-colors;
+  }
+  
+  .option-btn-selected {
+    @apply bg-neon-blue text-white shadow-neon;
+  }
+  
+  .option-btn-default {
+    @apply bg-punk-gray text-white hover:bg-punk-light;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg p-6 shadow-lg;
+  }
+  
+  .card-dark {
+    @apply bg-punk-dark rounded-lg p-6 shadow-lg text-white;
+  }
+
+  /* Container */
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+}
